@@ -15,7 +15,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  counts = Hash,new(0)
+  counts = Hash.new(0)
   array.collect {|element| count[element] += 1}
   counts.collect do |hash, number|
     hash[:count] = number
