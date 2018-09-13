@@ -15,7 +15,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  Hash[array.group_by{|i| i}.map{|k,v| [k,v.size]}]
+  Hash[array.group_by{|i| i}.map{|k,v| [v.size, k]}]
 end
 
 def merge_data(array1, array2)
