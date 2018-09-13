@@ -15,8 +15,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  count = Hash.new(0)
-  array.each {|name| count[name] += 1}
+  array.inject(Hash.new(0)) {|name, ele| name[ele] += 1}
 end
 
 def merge_data(array1, array2)
