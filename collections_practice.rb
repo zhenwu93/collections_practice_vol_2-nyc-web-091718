@@ -15,6 +15,10 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
+    count = {}
+    array.each do |element|
+    count = counts[element] += 1
+  end
 Hash[array.group_by{|i| i}.map{|k,v| [k,v.size]}]
 end
 
