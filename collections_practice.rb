@@ -31,7 +31,8 @@ def merge_data(keys, data)
   end
 end
 
-def find_cool
+def find_cool(cool)
+  cool.select {|entry| entry if entry.has_value?("cool")}
 end
 
 def organize_schools
