@@ -11,7 +11,7 @@ def first_wa(array)
 end
 
 def remove_non_strings(array)
-  array.delete_if {|string| string.class != string }
+  array.delete_if {|element| !(element.is_a? String)}
 end
 
 def count_elements(array)
